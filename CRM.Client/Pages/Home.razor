@@ -1,0 +1,43 @@
+﻿@page "/"
+@using CRM.Entidades
+@using CRM.Services
+@rendermode InteractiveAuto
+@inject NavigationManager navigationManager
+
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+@if (user != null)
+{
+    <p>Bem-vindo, @user.Nome!</p>
+}
+else
+{
+    <p>Nenhum usuário encontrado.</p>
+}
+
+<script>
+
+</script>
+
+@code {
+    [Inject]
+    private UserStateManager UserStateManager { get; set; } // Injete o UserStateManager
+
+    private Usuario user; // A entidade usuário que você vai usar
+
+    protected override void OnInitialized()
+    {
+        // Verifique se há dados do usuário
+        user = UserStateManager.GetCurrentUser(); 
+        if(user is null)
+        {
+            navigationManager.NavigateTo("/login");
+        }
+    }
+
+}

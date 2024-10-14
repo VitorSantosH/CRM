@@ -1,0 +1,28 @@
+# Binários e artefatos de compilação
+bin/
+obj/
+
+# Configurações de usuário específicas do Visual Studio/VSCode
+.vs/
+.vscode/
+
+# Configurações do ambiente de desenvolvimento
+launchSettings.json
+
+# Arquivos gerados de dependências (Node, se estiver usando)
+node_modules/
+
+# Arquivos de publicação
+wwwroot/
+
+# Outros arquivos de configuração temporária
+*.log
+*.user
+
+# Diretório de pacotes NuGet
+packages/
+.nuget/
+
+# Arquivos de lock do pacote
+project.lock.json
+project.fragment.lock.json
