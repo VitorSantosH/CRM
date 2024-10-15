@@ -1,28 +1,192 @@
-# Binários e artefatos de compilação
+# Pasta de compilação
 bin/
 obj/
 
-# Configurações de usuário específicas do Visual Studio/VSCode
+# Arquivos temporários
+[Tt]emp/
+
+# Arquivos de configuração do Visual Studio e Rider
+.vscode/
+.idea/
+
+# Arquivos de usuário específicos
+*.suo
+*.user
+*.userosscache
+
+# Arquivos de log
+*.log
+
+
+# Cobertura de código e resultados de teste
+.coverage/
+.coverlet/
+[Tt]est[Rr]esult*/
+
+# Arquivos de compilação
+*.exe
+*.pdb
+
+# ReSharper e Rider
+_ReSharper*/
+*.sln.iml
+
+.vsidx
+
+*.vsidx
+
+.bin 
+
+*.bin
+
+*.v2
+
+.v2 
+
+.wsuo
+
+.json
+
+.config
+
+*/config
+
+config/
+
+*/config/*
+
+*.json
+
+.v7
+
 .vs/
+vs/
+
+*/Debug/*
+Debug/*
+Debug/
+obj/
+
+*img/media/*
+
+*.mp4
+*.jpg
+
+*.cache
+.cache
+
+
+# Compiled DLLs
+*.dll
+*.exe
+*.so
+*.dylib
+*.pdb
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono auto generated files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
 .vscode/
 
-# Configurações do ambiente de desenvolvimento
-launchSettings.json
-
-# Arquivos gerados de dependências (Node, se estiver usando)
-node_modules/
-
-# Arquivos de publicação
-wwwroot/
-
-# Outros arquivos de configuração temporária
-*.log
-*.user
-
-# Diretório de pacotes NuGet
-packages/
-.nuget/
-
-# Arquivos de lock do pacote
+# .NET Core
 project.lock.json
 project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*.sln.docstates
+
+# Rider
+.idea/
+.idea_modules/
+.idea_icaches/
+.idea_workspace.xml
+.idea_config/
+.idea_tasks/
+.idea_databases/
+.idea_dataSources/
+.idea_dataSources.local/
+.idea_workspace.xml/
+.idea_libraries/
+
+# Directories for build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Local History for JetBrains IDEs
+.localhistory/
+
+# nCrunch
+*.ncrunch*
+NCrunchTemp/
+NCrunch/
+.ncr/
+
+# VS Code
+.history/
+.vscode/
+
+# Node.js dependencies
+node_modules/
+
+# Log files
+*.log
+
+# npm package directories
+node_modules/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Temp files
+*.swp
+*.swo
+*.bak
+*~
+
+*/media/*
+/media/*
+media/*

@@ -6,12 +6,13 @@
 
 
 <div class="login">
+    <h1>
+        CRM
+    </h1>
     <form>
-        <h2>
-            CRM
-        </h2>
-        <div class="mb-3" >
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><i class="bi bi-envelope-at-fill"></i> Email address</label>
             <input type="email"
                    class="form-control"
                    id="exampleInputEmail1"
@@ -23,7 +24,7 @@
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <label for="exampleInputPassword1" class="form-label"> <i class="bi bi-lock-fill"></i> Password</label>
             <input type="password"
                    class="form-control"
                    id="exampleInputPassword1"
@@ -44,17 +45,25 @@
 @code {
     private string Email { get; set; }
     private string Password { get; set; }
+    [Inject] private IJSRuntime JS { get; set; }
+
 
     private async Task FazerLogin(EventArgs e)
     {
         try
         {
+            string Url = await JS.InvokeAsync<string>("GetUrl");
+            using (var Client = new HttpClient())
+            {
+                
+            }
+
             Console.WriteLine(e.ToString());
-            navigationManager.NavigateTo("/teste");
+         //   navigationManager.NavigateTo("/teste");
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
-     }
+    }
 }
